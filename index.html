@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symbiotic Test of Knowledge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1 class="title">Symbiotic Test of Knowledge</h1>
+      <p class="tagline">Prove your @symbioticfi knowledge across three tiers: Beginner, Intermediate, and Advanced.</p>
+    </header>
+
+    <section id="screen-start" class="screen active">
+      <div class="card">
+        <h2>Select Difficulty</h2>
+        <div class="levels">
+          <button class="level-btn" data-level="beginner">Beginner</button>
+          <button class="level-btn" data-level="intermediate">Intermediate</button>
+          <button class="level-btn" data-level="advanced">Advanced</button>
+        </div>
+        <div class="start-actions">
+          <button id="btn-start" class="primary" disabled>Start Quiz</button>
+          <button id="btn-start-all" class="ghost">Play All Levels</button>
+        </div>
+        <p class="hint">Tip: You can also play <strong>All Levels</strong> (like the original flow) to run through every question sequentially.</p>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen">
+      <div class="hud">
+        <div class="hud-item">
+          <span class="label">Level</span>
+          <span id="hud-level" class="value">Beginner</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Question</span>
+          <span id="hud-progress" class="value">1 / 1</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Score</span>
+          <span id="hud-score" class="value">0</span>
+        </div>
+      </div>
+
+      <div id="question-card" class="card">
+        <h2 id="question-text">Question text</h2>
+        <div id="options" class="options"></div>
+        <div class="controls">
+          <button id="btn-submit" class="primary">Submit</button>
+          <button id="btn-next" class="ghost" disabled>Next</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+      </div>
+    </section>
+
+    <section id="screen-end" class="screen">
+      <div class="card">
+        <h2>Results</h2>
+        <p class="result-line">Final Score: <strong id="final-score">0</strong></p>
+        <p class="result-line">Correct: <strong id="final-correct">0</strong> / <span id="final-total">0</span></p>
+        <div id="breakdown"></div>
+        <div class="end-actions">
+          <button id="btn-retry" class="primary">Retry Level</button>
+          <button id="btn-home" class="ghost">Back to Home</button>
+          <a id="btn-share" class="link" target="_blank" rel="noopener">Share on X</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built for the @symbioticfi community. Fork, remix, and ship.</p>
+    </footer>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
